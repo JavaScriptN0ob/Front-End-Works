@@ -86,3 +86,28 @@ document
       element.childNodes[3].classList.add('hidden');
     })
   });
+
+  let name = document.getElementById('name');
+  let email = document.getElementById('email');
+  let message = document.getElementById('message');
+
+  name.addEventListener('click', () => {
+    name.classList.add('green_up');
+  });
+  name.addEventListener('mouseleave', () => {
+    setInterval( () => {name.classList.remove('green_up')}, 2000);
+  })
+
+  email.addEventListener('click', () => {
+    email.classList.add('green_up');
+  });
+  email.addEventListener('mouseleave', () => {
+    setInterval( () => {email.classList.remove('green_up')}, 2000);
+  });
+
+  message.addEventListener('click', () => {
+    message.classList.add('green_up');
+  });
+  message.addEventListener('mouseleave', () => {
+    setInterval( () => {message.classList.remove('green_up')}, 2000);
+  });

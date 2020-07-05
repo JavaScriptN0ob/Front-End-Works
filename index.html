@@ -19,12 +19,12 @@
         <li id="resume">Resume</li>
         <li id="services">Services</li>
         <li id="blog">Blog</li>
-        <li>Contact</li>
+        <li id="contact">Contact</li>
       </ul>
     </div>
   </header>
   <main>
-    <div class="home" id="homePage">
+    <div class="home hidden" id="homePage">
       <div class="home--top">
         <div class="avatarWrapper">
           <img src="./img/photo.png" class="avatar">
@@ -366,6 +366,80 @@
             <div class="blog__card--bottom">
               <div class="blog__card-title">HTML5</div>
               <div class="blog__card-description">Creative and Innovative Navigation Designs</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="contact" id="contactPage">
+      <div class="contact__title-wrapper">
+        <div class="contact__title">Contact</div>
+      </div>
+      <div class="contact__content-wrapper">
+        <div class="contact__content--left">
+          <div class="contact__content-title">Get in<span class="highlight">Touch</span></div>
+          <div class="contact__content-left-wrapper">
+            <iframe class="google_map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3350.155077547646!2d151.68995041623634!3d-32.89406787656087!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b733fd3ca1c92dd%3A0x4f4347dce1ae8b20!2s8%20Lee%20Cres%2C%20Birmingham%20Gardens%20NSW%202287!5e0!3m2!1sen!2sau!4v1593927064015!5m2!1sen!2sau" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            <div class="contact__location">
+              <ul>
+                <li>
+                  <span class="contact__location-wrapper"><i class="fas fa-map-marker-alt"></i></span>
+                  <span>Brisbane, Australia</span>
+                </li>
+                <li>
+                  <span class="contact__location-wrapper"><i class="fas fa-envelope"></i></span>
+                  <span>info@jiangren.com.au</span>
+                </li>
+                <li>
+                  <span class="contact__location-wrapper"><i class="fas fa-phone-alt"></i></span>
+                  <span>+123 654 78900</span>
+                </li>
+                <li>
+                  <span class="contact__location-wrapper"><i class="fas fa-check"></i></span>
+                  <span>Freelance Available</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="contact__content--right">
+          <div class="contact__content-title">Contact<span class="highlight">Form</span></div>
+          <div class="contact_form_wrapper">
+            <!-- <form class="contact_form">
+              <label for="name">
+                <div class="form_head"><i class="fas fa-user"></i></div>
+              </label>
+              <input type="text" id="name" placeholder="Full Name" />
+              <label for="email">
+                <div class="form_head"><i class="fas fa-envelope"></i></div>
+              </label>
+              <input type="email" id="email" placeholder="Email Address">
+              <label for="message">
+                <div class="form_head"><i class="fas fa-comment"></i></div>
+              </label>
+              <textarea id="message" cols="30" rows="10" placeholder="Message for Me"></textarea>
+            </form> -->
+            <div class="contact_form">
+              <div class="form_head"><i class="fas fa-user"></i></div>
+              <div class="form_input">
+                <input type="text" id="name" placeholder="Full Name" />
+              </div>
+            </div>
+            <div class="contact_form">
+              <div class="form_head"><i class="fas fa-envelope"></i></div>
+              <div class="form_input">
+                <input type="email" id="email" placeholder="Email Address">
+              </div>
+            </div>
+            <div class="contact_form">
+              <div class="form_head message"><i class="fas fa-comment"></i></div>
+              <div class="form_input message">
+                <textarea class="message_input" id="message" cols="30" rows="6" placeholder="Message for Me"></textarea>
+              </div>
+            </div>
+            <div class="recaptcha">recaptcha</div>
+            <div class="submit">
+              <button class="submit_button" type="submit">SEND MESSAGE</button>
             </div>
           </div>
         </div>
