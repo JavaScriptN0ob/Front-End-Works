@@ -290,7 +290,7 @@ td {
   color: orange;
 }
 
-/* resume starts from here except highlight css */
+/* resume page starts from here except highlight css */
 
 .resume {
   /* border: 1px solid black; */
@@ -472,10 +472,10 @@ td {
   background-color: rgb(68, 187, 118);
   width: 88%;
   height: 100%;
-  animation: skills 2s;
+  animation: skills--web 2s;
 }
 
-@keyframes skills {
+@keyframes skills--web {
   from {
     width: 0%;
   }
@@ -488,10 +488,10 @@ td {
   background-color: rgb(68, 187, 118);
   width: 75%;
   height: 100%;
-  animation: skills 2s;
+  animation: skills--graphic 2s;
 }
 
-@keyframes skills {
+@keyframes skills--graphic {
   from {
     width: 0%;
   }
@@ -504,10 +504,10 @@ td {
   background-color: rgb(68, 187, 118);
   width: 60%;
   height: 100%;
-  animation: skills 2s;
+  animation: skills--print 2s;
 }
 
-@keyframes skills {
+@keyframes skills--print {
   from {
     width: 0%;
   }
@@ -520,10 +520,10 @@ td {
   background-color: rgb(68, 187, 118);
   width: 95%;
   height: 100%;
-  animation: skills 2s;
+  animation: skills--html 2s;
 }
 
-@keyframes skills {
+@keyframes skills--html {
   from {
     width: 0%;
   }
@@ -536,10 +536,10 @@ td {
   background-color: rgb(68, 187, 118);
   width: 75%;
   height: 100%;
-  animation: skills 2s;
+  animation: skills--css 2s;
 }
 
-@keyframes skills {
+@keyframes skills--css {
   from {
     width: 0%;
   }
@@ -552,14 +552,284 @@ td {
   background-color: rgb(68, 187, 118);
   width: 92%;
   height: 100%;
-  animation: skills 2s;
+  animation: skills--jquery 2s;
 }
 
-@keyframes skills {
+@keyframes skills--jquery {
   from {
     width: 0%;
   }
   to {
     width: 92%;
   }
+}
+
+/* services page starts from here except highlight css */
+
+.services {
+  display: flex;
+  flex-direction: column;
+}
+
+.services__titleWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(68, 187, 118);
+  background-image: url(../img/multi-purpose-background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.services__title {
+  color: white;
+  font-size: 2.5rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin: 30px auto;
+}
+
+.services__contentWrapper {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+}
+
+.myServices {
+  /* border: 1px solid red; */
+  margin: 30px 40px;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; */
+}
+
+.myServicesTitle {
+  font-size: 1.3rem;
+  font-weight: 550;
+  letter-spacing: 1.5px;
+}
+
+.myServices__content {
+  /* border: 1px solid blue; */
+  display: flex;
+  flex-direction: row;
+  margin-top: 30px;
+}
+
+.myServices__block {
+  /* border: 1px solid rebeccapurple; */
+  display: flex;
+  flex-direction: column;
+}
+
+.myServices__icon {
+  /* border: 1px solid green; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 50%;
+  height: 120px;
+  width: 120px;
+  margin-left: auto;
+  margin-right: auto;
+  transition: all 0.3s ease-in-out;
+}
+
+.myServices__icon:hover {
+  box-shadow: 0px 7px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-7px);
+}
+
+.myServices__icon > img {
+  height: 64px;
+  width: 64px;
+}
+
+.myServices__title {
+  /* border: 1px solid black; */
+  text-align: center;
+  margin-top: 20px;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.myServices__description {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 0.95rem;
+}
+
+.clients {
+  /* border: 1px solid brown; */
+  margin: 30px 40px;
+}
+
+.clients__title {
+  font-size: 1.3rem;
+  font-weight: 550;
+  letter-spacing: 1.5px;
+}
+
+.clients__content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  
+}
+
+/* .clients__icon:nth-child(1) {
+  margin-left: 30px;
+  opacity: 0.5;
+  width: 90px;
+}
+
+.clients__icon:nth-child(n+2) {
+  margin-left: 60px;
+  opacity: 0.5;
+  width: 90px;
+} */
+
+.clients__icon {
+  margin-left: 40px;
+  margin-right: 20px;
+  opacity: 0.5;
+  width: 90px;
+}
+
+.clients__icon:hover {
+  opacity: 1;
+}
+
+.clients__icon > img {
+  width: 80px;
+  height: 80px;
+}
+
+/* blog page starts from here except highlight css */
+
+.blog {
+  display: flex;
+  flex-direction: column;
+}
+
+.blog__titleWrapper {
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  background-color: rgb(68, 187, 118);
+  background-image: url(../img/multi-purpose-background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.blog__title {
+  color: white;
+  font-size: 2.5rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin: 30px auto;
+}
+
+.blog__contentWrapper {
+  /* border: 1px solid blue; */
+  position: relative;
+}
+
+.blog__content {
+  /* border: 1px solid gold; */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: white;
+}
+
+.blog__card {
+  /* border: 1px solid black; */
+  width: 47%;
+  margin: 15px auto;
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+.blog__card:hover {
+  box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.11);
+}
+
+.blog__card--top {
+  /* border: 1px solid red; */
+  position: relative;
+  width: 100%;
+  cursor: pointer;
+}
+
+.blog__card-background {
+  width: 100%;
+}
+
+.blog__card-hover{
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fileIcon {
+  color: white;
+  zoom: 3;
+}
+
+.blog__card-Date {
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  width: 33px;
+  height: 42px;
+  padding: 1px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding-bottom: 5px;
+}
+
+.date__day {
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 400;
+  margin-top: 2px;
+}
+
+.date__month {
+  text-align: center;
+  font-size: 0.8rem;
+  font-weight: 500;
+  margin-top: 2px;
+}
+
+.blog__card--bottom {
+  /* border: 1px solid navy; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.blog__card-title {
+  color: rgba(0, 0, 0, 0.4);
+  font-size: 0.7rem;
+  margin: 10px auto 10px auto
+}
+
+.blog__card-description {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 20px;
 }
