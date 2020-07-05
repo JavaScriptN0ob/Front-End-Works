@@ -2,11 +2,13 @@ let home = document.getElementById('home');
 let resume = document.getElementById('resume');
 let services = document.getElementById('services');
 let blog = document.getElementById('blog');
+let contact = document.getElementById('contact');
 
 let homePage = document.getElementById('homePage');
 let resumePage = document.getElementById('resumePage');
 let servicesPage = document.getElementById('servicesPage');
 let blogPage = document.getElementById('blogPage');
+let contactPage = document.getElementById('contactPage');
 
 
 home.addEventListener('click', () => {
@@ -15,10 +17,12 @@ home.addEventListener('click', () => {
   resume.classList.remove('activate');
   services.classList.remove('activate');
   blog.classList.remove('activate');
+  contact.classList.remove('activate');
   homePage.classList.remove('hidden');
   resumePage.classList.add('hidden');
   servicesPage.classList.add('hidden');
   blogPage.classList.add('hidden');
+  contactPage.classList.add('hidden');
 });
 
 resume.addEventListener('click', () => {
@@ -27,10 +31,12 @@ resume.addEventListener('click', () => {
   resume.classList.add('activate');
   services.classList.remove('activate');
   blog.classList.remove('activate');
+  contact.classList.remove('activate');
   homePage.classList.add('hidden');
   resumePage.classList.remove('hidden');
   servicesPage.classList.add('hidden');
   blogPage.classList.add('hidden');
+  contactPage.classList.add('hidden');
 });
 
 services.addEventListener('click', () => {
@@ -39,10 +45,12 @@ services.addEventListener('click', () => {
   resume.classList.remove('activate');
   services.classList.add('activate');
   blog.classList.remove('activate');
+  contact.classList.remove('activate');
   homePage.classList.add('hidden');
   resumePage.classList.add('hidden');
   servicesPage.classList.remove('hidden');
   blogPage.classList.add('hidden');
+  contactPage.classList.add('hidden');
 });
 
 blog.addEventListener('click', () => {
@@ -50,10 +58,25 @@ blog.addEventListener('click', () => {
   resume.classList.remove('activate');
   services.classList.remove('activate');
   blog.classList.add('activate');
+  contact.classList.remove('activate');
   homePage.classList.add('hidden');
   resumePage.classList.add('hidden');
   servicesPage.classList.add('hidden');
   blogPage.classList.remove('hidden');
+  contactPage.classList.add('hidden');
+})
+
+contact.addEventListener('click', () => {
+  home.classList.remove('activate');
+  resume.classList.remove('activate');
+  services.classList.remove('activate');
+  blog.classList.remove('activate');
+  contact.classList.add('activate');
+  homePage.classList.add('hidden');
+  resumePage.classList.add('hidden');
+  servicesPage.classList.add('hidden');
+  blogPage.classList.add('hidden');
+  contactPage.classList.remove('hidden');
 })
 
 
