@@ -1,7 +1,18 @@
 body {
-  background-image: url(../img/multi-purpose-background.png);
+  background-image: url('https://hades217.github.io/images/main_bg.png');
+  /* background-size: 1200px 600px; */
+  background-size: cover;
+  background-repeat: no-repeat;
   background-position: center;
+  /* background-origin: content-box; */
   background-color: rgba(202, 200, 200, 0.2);
+  height: 100%;
+  width: 100%;
+  font-family: 'Roboto', sans-serif;
+}
+
+.hidden {
+  display: none !important;
 }
 
 header {
@@ -64,6 +75,19 @@ header {
   text-align: center;
 }
 
+.navBar__items > .activate {
+  color: rgba(0, 0, 0, 1);
+}
+
+.navBar__items > .activate::after {
+  content: "";
+  border-bottom: 3px solid rgb(68, 187, 118);
+  display: block;
+  width: 30px;
+  margin: 5px auto 0;
+  text-align: center;
+}
+
 main {
   /* border: 1px solid yellow; */
   width: 90%;
@@ -72,13 +96,16 @@ main {
   max-width: 1000px;
   border-radius: 10px;
   overflow: hidden;
+  margin-top: 10px;
   box-shadow: 0px 18px 24px rgba(0, 0, 0, 0.15);
+  /* opacity: 0; */
 }
 
 .home {
   /* border: 1px solid red; */
   display: flex;
   flex-direction: column;
+  /* display: none; */
 }
 
 .home--top {
@@ -89,6 +116,8 @@ main {
   background-image: url(../img/multi-purpose-background.png);
   background-position: center;
   background-repeat: no-repeat;
+  /* background-size: 1000px 290px; */
+  background-size: cover;
 }
 
 .avatarWrapper {
@@ -259,4 +288,278 @@ td {
 
 .personalInfo__value > a:hover {
   color: orange;
+}
+
+/* resume starts from here except highlight css */
+
+.resume {
+  /* border: 1px solid black; */
+  display: flex;
+  flex-direction: column;
+  /* display: none; */
+}
+
+.resume__titleWrapper {
+  /* border: 1px solid brown; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(68, 187, 118);
+  background-image: url(../img/multi-purpose-background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.resume__title {
+  color: white;
+  font-size: 2.5rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin: 30px auto;
+}
+
+.resume__contentWrapper {
+  /* border: 1px solid gold; */
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+}
+
+.resume__content--top {
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: row;
+}
+
+.educationWrapper {
+  /* border: 1px solid blueviolet; */
+  /* margin-left: 10px;
+  margin-right: 10px; */
+  flex-grow: 1;
+}
+
+.education__title {
+  /* border: 1px solid red; */
+  font-size: 1.3rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+}
+
+.education__contentWrapper {
+  /* border: 1px solid black; */
+  border-left: 2px solid rgba(0, 0, 0, 0.2);
+  margin-top: 10px;
+  padding: 10px 20px;
+}
+
+.education__content-block {
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-left: 2px solid rgb(68, 187, 118);
+  padding: 15px;
+  margin-top: 10px;
+  position: relative;
+  box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.2);
+}
+
+.education__content-block:hover {
+  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.2);
+}
+
+.education__content-block::before {
+  content: "";
+  height: 10px;
+  width: 10px;
+  border: 2px solid rgb(68, 187, 118);
+  background-color: white;
+  border-radius: 50%;
+  display: block;
+  position: absolute;
+  left: -31px;
+  z-index: 100;
+}
+
+.education__content-block::after {
+  content: "";
+  display: block;
+  width: 23px;
+  height: 2px;
+  background-color: rgb(68, 187, 118);
+  position: absolute;
+  left: -24px;
+  top: 21px;
+}
+
+.education__content--top {
+  font-size: 1rem;
+  font-weight: 550;
+}
+
+.education__content--middle {
+  display: flex;
+  flex-direction: row;
+  margin-top: 5px;
+}
+
+.education__contentDate {
+  font-size: 0.8rem;
+}
+
+.education__content-divider {
+  width: 1px;
+  background-color: rgba(0, 0, 0, 0.2);
+  height: 15px;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+.education__contentLocation {
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 0.8rem;
+}
+
+.education__content--bottom {
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
+
+.resume__content--bottom {
+  /* border: 1px solid blue; */
+  display: flex;
+  flex-direction: row;
+}
+
+.skillWrapper {
+  /* border: 1px solid brown; */
+  flex-grow: 1;
+  margin-top: 20px;
+}
+
+.skill_title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+}
+
+.skill__contentWrapper {
+  /* border: 1px solid yellow; */
+  margin-top: 0px;
+  display: flex;
+  flex-direction: column;
+  /* margin-left: 10px;
+  margin-right: 10px; */
+}
+
+.skill__block {
+  /* border: 1px solid thistle; */
+  margin-top: 10px;
+}
+
+.skill__name {
+  font-size: 0.8rem;
+}
+
+.skill__container {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  height: 10px;
+  width: 95.5%;
+  background-color: rgba(0, 0, 0, 0.03);
+  margin-top: 5px;
+}
+
+.skill__filler--web {
+  background-color: rgb(68, 187, 118);
+  width: 88%;
+  height: 100%;
+  animation: skills 2s;
+}
+
+@keyframes skills {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 88%;
+  }
+}
+
+.skill__filler--graphic {
+  background-color: rgb(68, 187, 118);
+  width: 75%;
+  height: 100%;
+  animation: skills 2s;
+}
+
+@keyframes skills {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 75%;
+  }
+}
+
+.skill__filler--print {
+  background-color: rgb(68, 187, 118);
+  width: 60%;
+  height: 100%;
+  animation: skills 2s;
+}
+
+@keyframes skills {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 60%;
+  }
+}
+
+.skill__filler--html {
+  background-color: rgb(68, 187, 118);
+  width: 95%;
+  height: 100%;
+  animation: skills 2s;
+}
+
+@keyframes skills {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 95%;
+  }
+}
+
+.skill__filler--css {
+  background-color: rgb(68, 187, 118);
+  width: 75%;
+  height: 100%;
+  animation: skills 2s;
+}
+
+@keyframes skills {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 75%;
+  }
+}
+
+.skill__filler--jquery {
+  background-color: rgb(68, 187, 118);
+  width: 92%;
+  height: 100%;
+  animation: skills 2s;
+}
+
+@keyframes skills {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 92%;
+  }
 }

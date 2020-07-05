@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
   <link rel="stylesheet" href="./css/johndoe.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
   <title>John Doe</title>
 </head>
 <body>
@@ -14,8 +15,8 @@
     </div>
     <div class="page__navBar">
       <ul class="navBar__items">
-        <li>Home</li>
-        <li>Resume</li>
+        <li id="home" class="activate">Home</li>
+        <li id="resume">Resume</li>
         <li>Services</li>
         <li>Blog</li>
         <li>Contact</li>
@@ -23,7 +24,7 @@
     </div>
   </header>
   <main>
-    <div class="home">
+    <div class="home" id="homePage">
       <div class="home--top">
         <div class="avatarWrapper">
           <img src="./img/photo.png" class="avatar">
@@ -93,7 +94,130 @@
         </div>
       </div>
     </div>
+    <div class="resume hidden" id="resumePage">
+      <div class="resume__titleWrapper">
+        <div class="resume__title">Resume</div>
+      </div>
+      <div class="resume__contentWrapper">
+        <div class="resume__content--top">
+          <div class="educationWrapper">
+            <div class="education__title">Education</div>
+            <div class="education__contentWrapper">
+              <div class="education__content-block">
+                <div class="education__content--top">Specialization Course</div>
+                <div class="education__content--middle">
+                  <div class="education__contentDate"><span class="highlight">2010</span></div>
+                  <div class="education__content-divider"></div>
+                  <div class="education__contentLocation">Apple Inc.</div>
+                </div>
+                <div class="education__content--bottom">Mauris magna sapien, pharetra consectetur fringilla vitae, interdum sed tortor.</div>
+              </div>
+              <div class="education__content-block">
+                <div class="education__content--top">Specialization Course</div>
+                <div class="education__content--middle">
+                  <div class="education__contentDate"><span class="highlight">2010</span></div>
+                  <div class="education__content-divider"></div>
+                  <div class="education__contentLocation">Apple Inc.</div>
+                </div>
+                <div class="education__content--bottom">Mauris magna sapien, pharetra consectetur fringilla vitae, interdum sed tortor.</div>
+              </div>
+              <div class="education__content-block">
+                <div class="education__content--top">Specialization Course</div>
+                <div class="education__content--middle">
+                  <div class="education__contentDate"><span class="highlight">2010</span></div>
+                  <div class="education__content-divider"></div>
+                  <div class="education__contentLocation">Apple Inc.</div>
+                </div>
+                <div class="education__content--bottom">Mauris magna sapien, pharetra consectetur fringilla vitae, interdum sed tortor.</div>
+              </div>
+            </div>
+          </div>
+          <div class="educationWrapper">
+            <div class="education__title">Experience</div>
+            <div class="education__contentWrapper">
+              <div class="education__content-block">
+                <div class="education__content--top">Frontend-developer</div>
+                <div class="education__content--middle">
+                  <div class="education__contentDate"><span class="highlight">Dec 2012 - current</span></div>
+                  <div class="education__content-divider"></div>
+                  <div class="education__contentLocation">Web Agency</div>
+                </div>
+                <div class="education__content--bottom">Mauris magna sapien, pharetra consectetur fringilla vitae, interdum sed tortor.</div>
+              </div>
+              <div class="education__content-block">
+                <div class="education__content--top">Web Designer</div>
+                <div class="education__content--middle">
+                  <div class="education__contentDate"><span class="highlight">Dec 2011 - Nov 2012</span></div>
+                  <div class="education__content-divider"></div>
+                  <div class="education__contentLocation">Apple Inc.</div>
+                </div>
+                <div class="education__content--bottom">Mauris magna sapien, pharetra consectetur fringilla vitae, interdum sed tortor.</div>
+              </div>
+              <div class="education__content-block">
+                <div class="education__content--top">Graphic Designer</div>
+                <div class="education__content--middle">
+                  <div class="education__contentDate"><span class="highlight">Jan 2010 - Dec 2011</span></div>
+                  <div class="education__content-divider"></div>
+                  <div class="education__contentLocation">Apple Inc.</div>
+                </div>
+                <div class="education__content--bottom">Mauris magna sapien, pharetra consectetur fringilla vitae, interdum sed tortor.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="resume__content--bottom">
+          <div class="skillWrapper">
+            <div class="skill_title">Design <span class="highlight">Skills</span></div>
+            <div class="skill__contentWrapper">
+              <div class="skill__block">
+                <div class="skill__name">Web Design</div>
+                <div class="skill__container">
+                  <div class="skill__filler--web"></div>
+                </div>
+              </div>
+              <div class="skill__block">
+                <div class="skill__name">Graphic Design</div>
+                <div class="skill__container">
+                  <div class="skill__filler--graphic"></div>
+                </div>
+              </div>
+              <div class="skill__block">
+                <div class="skill__name">Print Design</div>
+                <div class="skill__container">
+                  <div class="skill__filler--print"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="skillWrapper">
+            <div class="skill_title">Coding <span class="highlight">Skills</span></div>
+            <div class="skill__contentWrapper">
+              <div class="skill__block">
+                <div class="skill__name">HTML5</div>
+                <div class="skill__container">
+                  <div class="skill__filler--html"></div>
+                </div>
+              </div>
+              <div class="skill__block">
+                <div class="skill__name">CSS3/LESS/SASS</div>
+                <div class="skill__container">
+                  <div class="skill__filler--css"></div>
+                </div>
+              </div>
+              <div class="skill__block">
+                <div class="skill__name">jQuery</div>
+                <div class="skill__container">
+                  <div class="skill__filler--jquery"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </main>
-  <footer></footer>
+  <footer>
+    <script type="text/javascript" src="./js/johndoe.js"></script>
+  </footer>
 </body>
 </html>
