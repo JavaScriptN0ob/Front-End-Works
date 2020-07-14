@@ -7,3 +7,6 @@
 3. Jumping/Vibrating animation on validation form after clicking submit button is little bit tracky to me now, may work on it later.
 4. Rotating animation between pages is my next target to deal with, please give it a time.
     - Finding JS library to solve 3&4, but looks not that good. Due to all codes in this project is written by myself without coping, so I decided to ignore 3&4 for a little bit longer.
+    
+Here is the screen shoot of this resume project, if you do not want to download and run on your PC.
+
