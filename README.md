@@ -9,4 +9,10 @@
     - Finding JS library to solve 3&4, but looks not that good. Due to all codes in this project is written by myself without coping, so I decided to ignore 3&4 for a little bit longer.
     
 Here is the screen shoot of this resume project, if you do not want to download and run on your PC.
+Aso this is the github page link, if you want to see the website:
+        https://javascriptn0ob.github.io/
 ![image](https://github.com/JavaScriptN0ob/Front-End-Works/blob/master/img/screen-shoot/Resume01.PNG)
+![image](https://github.com/JavaScriptN0ob/Front-End-Works/blob/master/img/screen-shoot/Resume02.PNG)
+![image](https://github.com/JavaScriptN0ob/Front-End-Works/blob/master/img/screen-shoot/Resume03.PNG)
+![image](https://github.com/JavaScriptN0ob/Front-End-Works/blob/master/img/screen-shoot/Resume04.PNG)
+![image](https://github.com/JavaScriptN0ob/Front-End-Works/blob/master/img/screen-shoot/Resume05.PNG)
