@@ -110,27 +110,99 @@ document
     })
   });
 
-  let name = document.getElementById('name');
-  let email = document.getElementById('email');
-  let message = document.getElementById('message');
+  // let name = document.getElementById('name');
+  // let email = document.getElementById('email');
+  // let message = document.getElementById('message');
 
-  name.addEventListener('click', () => {
-    name.classList.add('green_up');
-  });
-  name.addEventListener('mouseleave', () => {
-    setInterval( () => {name.classList.remove('green_up')}, 2000);
-  })
+  // name.addEventListener('click', () => {
+  //   name.classList.add('green_up');
+  // });
+  // name.addEventListener('mouseleave', () => {
+  //   setInterval( () => {name.classList.remove('green_up')}, 2000);
+  // })
 
-  email.addEventListener('click', () => {
-    email.classList.add('green_up');
-  });
-  email.addEventListener('mouseleave', () => {
-    setInterval( () => {email.classList.remove('green_up')}, 2000);
+  // email.addEventListener('click', () => {
+  //   email.classList.add('green_up');
+  // });
+  // email.addEventListener('mouseleave', () => {
+  //   setInterval( () => {email.classList.remove('green_up')}, 2000);
+  // });
+
+  // message.addEventListener('click', () => {
+  //   message.classList.add('green_up');
+  // });
+  // message.addEventListener('mouseleave', () => {
+  //   setInterval( () => {message.classList.remove('green_up')}, 2000);
+  // });
+
+let name = document.querySelector('#name');
+let nameInputBox = name.parentNode.parentNode;
+let email = document.querySelector('#email');
+let emailInputBox = email.parentNode.parentNode;
+var emailRegex = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+let message = document.querySelector('#message');
+let messageInputBox = message.parentNode.parentNode;
+
+nameInputBox.addEventListener('click', () => {
+  nameInputBox.childNodes[1].childNodes[0].classList.add('form_head--success');
+  if(name.value == "") {
+    nameInputBox.classList.remove('form--success');
+    nameInputBox.classList.add('form--fail');
+    nameInputBox.childNodes[1].classList.add('name--error');
+  } else {
+    nameInputBox.classList.remove('form--fail');
+    nameInputBox.classList.add('form--success');
+    nameInputBox.childNodes[1].classList.remove('name--error');
+  }
+});
+
+emailInputBox.addEventListener('click', () => {
+  emailInputBox.childNodes[1].childNodes[0].classList.add('form_head--success');
+  if(emailRegex.test(email.value)) {
+    emailInputBox.classList.remove('form--fail');
+    emailInputBox.classList.add('form--success');
+    emailInputBox.childNodes[1].classList.remove('email--error');
+  } else {
+    emailInputBox.classList.remove('form--success');
+    emailInputBox.classList.add('form--fail');
+    emailInputBox.childNodes[1].classList.add('email--error');
+  }
+});
+
+messageInputBox.addEventListener('click', () => {
+  messageInputBox.childNodes[1].childNodes[0].classList.add('form_head--success');
+  if(message.value == "") {
+    messageInputBox.classList.remove('form--success');
+    messageInputBox.classList.add('form--fail');
+    messageInputBox.childNodes[1].classList.add('message--error');    
+  } else {
+    messageInputBox.classList.remove('form--fail');
+    messageInputBox.classList.add('form--success');
+    messageInputBox.childNodes[1].classList.remove('message--error');
+  }
+});
+
+ 
+// interval not working properly;
+// document
+// .querySelectorAll('.contact_form')
+// .forEach( (element) => {
+//   element.addEventListener('mouseleave', () => {
+//     setInterval( () => {element.classList.remove('form--active')}, 2000);
+//     clearInterval();
+//   });
+// });
+
+document
+  .querySelectorAll('.contact_form')
+  .forEach( (element) => {
+    element.addEventListener('mouseleave', () => {
+      element.classList.remove('form--success');
+      element.classList.remove('form--fail');
+      element.childNodes[1].childNodes[0].classList.remove('form_head--success');
+    });
   });
 
-  message.addEventListener('click', () => {
-    message.classList.add('green_up');
-  });
-  message.addEventListener('mouseleave', () => {
-    setInterval( () => {message.classList.remove('green_up')}, 2000);
-  });
+document.querySelector('.submit_button').addEventListener('click', () => {
+  alert(`Due to the unfinished of reCAPTCHA system, you couldn't send me a message, sorry!`);
+})

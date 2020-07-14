@@ -419,25 +419,28 @@
               </label>
               <textarea id="message" cols="30" rows="10" placeholder="Message for Me"></textarea>
             </form> -->
-            <div class="contact_form">
-              <div class="form_head"><i class="fas fa-user"></i></div>
+            <div class="contact_form name_input">
+              <div class="form_head"><i class="fas fa-user form__title"></i></div>
               <div class="form_input">
                 <input type="text" id="name" placeholder="Full Name" />
               </div>
             </div>
-            <div class="contact_form">
-              <div class="form_head"><i class="fas fa-envelope"></i></div>
+            <div class="contact_form email_input">
+              <div class="form_head"><i class="fas fa-envelope form__title"></i></div>
               <div class="form_input">
-                <input type="email" id="email" placeholder="Email Address">
+                <input class="email--error" type="email" id="email" placeholder="Email Address">
               </div>
             </div>
-            <div class="contact_form">
-              <div class="form_head message"><i class="fas fa-comment"></i></div>
+            <div class="contact_form message_input">
+              <div class="form_head message"><i class="fas fa-comment form__title"></i></div>
               <div class="form_input message">
-                <textarea class="message_input" id="message" cols="30" rows="6" placeholder="Message for Me"></textarea>
+                <textarea class="message_input message--error" id="message" cols="30" rows="6" placeholder="Message for Me"></textarea>
               </div>
             </div>
-            <div class="recaptcha">recaptcha</div>
+            <div class="recaptcha">
+              <div id='recaptchaDiv'></div>
+              <input type="hidden" class="g-recaptcha" data-sitekey="sitekey" data-callback="submitComment" data-size="invisible" data-badge="inline" />
+            </div>
             <div class="submit">
               <button class="submit_button" type="submit">SEND MESSAGE</button>
             </div>
@@ -448,6 +451,17 @@
   </main>
   <footer>
     <script type="text/javascript" src="./js/resume.js"></script>
+    <script src="https://recaptcha.net/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
+    <script type="text/javascript">
+      var onloadCallback = function () {
+          grecaptcha.render('recaptchaDiv', {
+              'sitekey': "6LdOKrEZAAAAACWX75Ec-XbkN0WW0cY5Ck0YSX6V",
+              'callback': function (token) {
+                  submitComment(token);
+              }
+          });
+      };
+  </script>
   </footer>
 </body>
 </html>

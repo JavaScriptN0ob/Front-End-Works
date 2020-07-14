@@ -85,7 +85,7 @@ header {
   display: block;
   width: 30px;
   margin: 5px auto 0;
-  text-align: center;
+  /* text-align: center; */
 }
 
 main {
@@ -211,11 +211,11 @@ main {
   width: 45%;
   margin-left: 5%;
   padding: 10px;
-  margin-top: 30px;
+  margin-top: 10px;
 }
 
 .aboutMe__title {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   font-weight: 600;
   margin-top: 20px;
 }
@@ -223,8 +223,8 @@ main {
 .aboutMe__description {
   /* border: 1px solid green; */
   width: 98%;
-  margin-top: 30px;
-  font-size: 0.85rem;
+  margin-top: 20px;
+  font-size: 0.75rem;
 }
 
 .personalInfoWrapper {
@@ -262,6 +262,7 @@ td {
   list-style: none;
   padding-left: 15px;
   margin-top: 30px;
+  font-size: 0.75rem;
 }
 
 .personalInfo__title {
@@ -270,7 +271,6 @@ td {
   display: inline-block;
   min-width: 100px;
   margin-bottom: 10px;
-  font-size: 0.9rem;
 }
 
 .personalInfo__value {
@@ -934,7 +934,7 @@ td {
 }
 
 .contact__content--right {
-  border: 1px solid yellow;
+  /* border: 1px solid yellow; */
   /* flex-grow: 1; */
   width: 50%;
   margin-left: 3%;
@@ -943,7 +943,7 @@ td {
 .contact_form_wrapper {
   /* display: flex;
   flex-direction: column; */
-  border: 1px solid red;
+  /* border: 1px solid red; */
   margin-top: 30px;
 }
 
@@ -951,8 +951,41 @@ td {
   /* border: 1px solid blue; */
   display: flex;
   flex-direction: row;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
   border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+  position: relative;
+  /* transition: all 3s ease-in-out; */
+}
+
+.contact_form::after {
+  content: "";
+  border-bottom: 4px solid rgb(255, 255, 255);
+  display: block;
+  width: 0px;
+  position: absolute;
+  bottom: -1.5px;
+  margin-left: 50%;
+  transition: all 0.3s ease-in-out;
+}
+
+.form--success::after {
+  content: "";
+  border-bottom: 4px solid rgb(68, 187, 118);
+  display: block;
+  width: 100%;
+  position: absolute;
+  bottom: -1.5px;
+  margin-left: 0;
+}
+
+.form--fail::after {
+  content: "";
+  border-bottom: 4px solid rgb(235, 44, 44);
+  display: block;
+  width: 100%;
+  position: absolute;
+  bottom: -1.5px;
+  margin-left: 0;
 }
 
 .green_up {
@@ -968,7 +1001,11 @@ td {
   align-items: center;
 }
 
-.form_head > i {
+.form_head--success {
+  color: rgb(68, 187, 118) !important;
+}
+
+.form__title {
   zoom: 1.2;
   color: rgba(0, 0, 0, 0.25);
 }
@@ -977,6 +1014,46 @@ td {
   /* border: 1px solid black; */
   height: 35px;
   width: 100%;
+  position: relative;
+}
+
+.name--error::after {
+  content: "Name is required.";
+  display: block;
+  height: 12px;
+  width: 76px;
+  position: absolute;
+  font-size: 0.5rem;
+  background-color: rgb(233, 232, 232);
+  color: red;
+  top: 35px;
+  left: 35px;
+}
+
+.email--error::after {
+  content: "Valid email is required.";
+  display: block;
+  height: 12px;
+  width: 100px;
+  position: absolute;
+  font-size: 0.5rem;
+  background-color: rgb(233, 232, 232);
+  color: red;
+  top: 35px;
+  left: 35px;
+}
+
+.message--error::after {
+  content: "Please, leave me a message.";
+  display: block;
+  height: 12px;
+  width: 130px;
+  position: absolute;
+  font-size: 0.5rem;
+  background-color: rgb(233, 232, 232);
+  color: red;
+  top: 100px;
+  left: 35px;
 }
 
 .form_input > input {
@@ -991,13 +1068,22 @@ td {
 }
 
 .message_input {
+  /* margin-top: 1px; */
+  margin: 0.8px;
+  /* height: 210px */
+  /* border: 1px solid salmon; */
   width: 98.5%;
   border: 0px;
+  line-height: 15.98px;
 }
 
 .input_chosen {
   border-bottom: rgb(68, 187, 118);
   color: rgb(68, 187, 118);
+}
+
+.recaptcha {
+  margin-top: 15px;
 }
 
 .submit_button {
